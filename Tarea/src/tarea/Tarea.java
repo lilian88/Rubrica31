@@ -15,8 +15,11 @@ public class Tarea {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println("Hello world");
+        // TODO code application logic her
+        System.out.println("Gasolinera");
+        System.out.println("Bienvenidos a PetroEcuador");
+        System.out.println("1)Gasolina $3.00 \n2)Diesel   $1.50");
+        System.out.println("ingrese la cantidad en Galones");
     }
     
 }
