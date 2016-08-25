@@ -21,14 +21,31 @@ public class Tarea {
         Scanner ingreso=new Scanner(System.in);
         int galones, opciones;
         double diesel=1.50, gasolina=3.00;
-        double iva=12;
+        double iva=12,calculoiva = 0;
+        double total = 0,subtotal = 0;
+        
         System.out.println("Gasolinera");
         System.out.println("Bienvenidos a PetroEcuador");
         System.out.println("1)Gasolina $3.00 \n2)Diesel   $1.50");
         opciones=ingreso.nextInt();
         System.out.println("ingrese la cantidad en Galones");
         galones=ingreso.nextInt();
+        
+        if (opciones==1) {
+            subtotal=galones*gasolina;
+            calculoiva=subtotal*iva/100;
+            total=subtotal+calculoiva;
+        }
+        if (opciones==2) {
+            subtotal=galones*diesel;
+            calculoiva=subtotal*iva/100;
+            total=subtotal+calculoiva;
+        }
        
+        System.out.println("*****Factura*******");
+        System.out.println("Subtotal :"+subtotal);
+        System.out.println("Iva      :"+calculoiva);
+        System.out.println("Total    :"+total);
     }
     
 }
